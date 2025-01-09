@@ -1,0 +1,448 @@
+body {
+    background-color: #000;
+    color: #f9f8f0;
+    padding: 40px 76px;
+    line-height: 1.5;
+    font-family: inter;
+    font-weight: 200;
+    font-size: 21px;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        scale: o.5;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+svg path {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 1;
+    stroke-dasharray: 90;
+    stroke-dashoffset: 90;
+    animation: logoMove 7s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes logoMove {
+    0% {
+        stroke-dashoffset: 90;
+    }
+
+    80% {
+        fill: transparent;
+    }
+
+    100% {
+        fill: #fff;
+        stroke-dashoffset: 0;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: inter;
+    font-weight: normal;
+    font-size: 21px;
+    margin-bottom: 40px;
+
+}
+
+
+.logo,
+header a,
+a {
+    font-weight: 200;
+    text-decoration: none;
+    margin: 10px;
+    color: #f9f8f0;
+    text-transform: uppercase;
+
+}
+
+a:hover {
+    color: #c8f2f6;
+}
+
+.selected {
+    color: #c8f2f6;
+}
+
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 80px;
+    width: 100%;
+    height: 80vh;
+    animation: heroAppear 3s ease-in-out;
+
+}
+
+/* take out at the end 
+
+@keyframes heroAppear {
+    0% {
+        opacity: 0;
+        scale: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+take out at the end */
+
+.hero-text {
+    gap: 3px;
+
+}
+
+.hero h1 {
+    font-size: 15vw;
+    margin: 3px;
+    font-weight: 300;
+    line-height: 1;
+    font-family: anton sc;
+
+}
+
+.moments {
+    position: relative;
+    left: 25%;
+
+}
+
+
+.hero-explain {
+    font-size: 20px;
+    font-family: inter;
+    font-weight: 200;
+    margin-top: 20px;
+
+}
+
+.hero-img-wrapper {
+    position: absolute;
+    top: 20%;
+    right: 85%;
+    max-width: 30px;
+    height: 300px;
+    animation: float 3s ease-in-out infinite;
+    mix-blend-mode: darken;
+}
+
+
+.hero-img,
+.hero-img2 {
+
+    width: 100%;
+    height: 100%;
+    transform: rotate(10deg);
+    transition: 0.8s ease;
+
+}
+
+.hero-img:hover {
+    transform: rotate(-10deg);
+    width: 300px;
+}
+
+.hero-img2-wrapper {
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    max-width: 20vw;
+    height: 20vw;
+    animation: float 3s ease-in-out infinite;
+    mix-blend-mode: screen;
+}
+
+.hero-img2 img {
+    border-radius: inherit;
+    transition: 1s ease-in-out;
+
+}
+
+.hero-img2:hover img {
+    transform: rotate(-10deg);
+    border-radius: 100%;
+}
+
+.hero-img img,
+.hero-img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+
+.gallery1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+
+}
+
+.galleryimages {
+
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.8s ease-in-out;
+    animation: appear ease-in-out;
+    filter: grayscale(100%);
+    transition: 0.2s ease-in-out;
+    overflow: hidden;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.galleryimages img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+}
+
+.galleryimages:hover {
+    filter: grayscale(0%);
+}
+
+.CA h2 {
+    margin: 7px;
+    font-size: clamp(20px, 2vw + 50px, 70px);
+    line-height: 1;
+    font-family: anton sc;
+}
+
+.CA {
+
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0;
+    margin-top: 200px;
+    margin-bottom: 150px;
+
+}
+
+.CA-line {
+
+    width: 30vw;
+    height: 1px;
+    background-color: #f9f8f0;
+    margin: 10px;
+}
+
+.ca-about {
+
+    position: relative;
+    top: -100%;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: inter;
+    font-size: 21px;
+    margin-top: 50px;
+
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*ABOUT PAGE*/
+
+
+.about-page {
+    font-size: 20px;
+    display: flex;
+    height: 70vh;
+    line-height: 1.6;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.about-text {
+    font-family: inter;
+    font-weight: 200;
+    width: 40vw;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.about-h3 {
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0;
+}
+
+.about-img {
+    position: absolute;
+    right: 0;
+    width: 45vw;
+    height: 100vh;
+    transition: 0.2s ease-in-out;
+    z-index: -1;
+
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-footer {
+    display: flex;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    justify-content: flex-end;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 20px;
+        line-height: 1.4;
+        font-size: 17px;
+    }
+
+
+    header,
+    footer {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 100px;
+
+    }
+
+    .hero {
+        position: relative;
+        display: flex;
+        height: 60vh;
+        padding: 20px;
+        gap: 1000px;
+    }
+
+
+    .hero-img2-wrapper {
+
+        max-width: 100px;
+        height: 150px;
+    }
+
+    .hero-explain {
+        margin-top: 50px;
+
+    }
+
+
+    .ca {
+        padding: 10px;
+    }
+
+    .CA h2 {
+        margin: 7px;
+        font-size: clamp(10px, 2vw + 25px, 40px);
+        line-height: 1;
+        font-family: anton sc;
+    }
+
+}
+
+
+/*ABOUT PAGE*/
+
+@media screen and (max-width: 900px) {
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    .about-page {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.6;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: max-content;
+
+    }
+
+    .about-h3 {
+        margin-bottom: 50px;
+    }
+
+    .about-text {
+        width: 100%;
+        font-size: 16px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+
+    }
+
+    .about-img {
+        margin-top: 40px;
+        position: relative;
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .about-footer {
+        margin: 60px 10px 30px 10px;
+        justify-content: center;
+    }
+}
