@@ -95,7 +95,6 @@ take out at the end */
 .hero-wrapper {
     margin: 20px;
     width: 100%;
-    position: relative;
 }
 
 .hero-text {
@@ -150,7 +149,7 @@ take out at the end */
 .hero-img2 {
     position: absolute;
     top: 25%;
-    right: 10%;
+    left: 70%;
     width: 20vw;
     height: 20vw;
     animation: float 3s ease-in-out infinite;
@@ -397,20 +396,22 @@ html {
         margin-bottom: 60px;
     }
 
+    
     .hero {
-        height: 70vh;
+        height: 80vh;
         align-items: flex-end;
     }
 
+.hero-img2 img {
+    transform: rotate(1deg);
+
+}
     .hero-img2 {
         position: absolute;
-        display: flex;
-        justify-content: center;
-        top: -50%;
-        right: 20%;
-        left: 20%;
-        width: auto;
-        height: auto;
+        top: 0;
+        left: 50%;
+        width: 80vw;
+        height: 80vh;
         animation: float 3s ease-in-out infinite;
         mix-blend-mode: screen;
     }
