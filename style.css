@@ -329,6 +329,7 @@ html {
 
 .modal {
     display: none;
+    visibility: visible;
 }
 
 .modal-background {
@@ -432,6 +433,12 @@ html {
 
 @media screen and (max-width: 600px) {
 
+    .modal {
+        display: none;
+        visibility: hidden;
+    }
+    
+
     body {
         padding: 15px;
         line-height: 1.4;
@@ -501,7 +508,6 @@ html {
         height: 400px;
         filter: grayscale(100%);
     }
-
 
 }
 
