@@ -398,7 +398,7 @@ html {
     }
 
     .hero {
-        height: 85vh;
+        height: 70vh;
         align-items: flex-end;
     }
 
@@ -406,11 +406,11 @@ html {
         position: absolute;
         display: flex;
         justify-content: center;
-        top: -399px;
+        top: -100%;
         right: 20%;
         left: 20%;
         width: auto;
-        height: 350px;
+        height: auto;
         animation: float 3s ease-in-out infinite;
         mix-blend-mode: screen;
     }
@@ -476,7 +476,4 @@ html {
         font-family: anton sc;
     }
 
-    .hero-img2 {
-        top: -470px;
-    }
 }
