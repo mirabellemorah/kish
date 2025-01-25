@@ -435,7 +435,7 @@ html {
         transform: rotate(0);
         top: 10%;
         left: 50%;
-        transform: translate(-50%, -100%);
+        transform: translate(-50%, -120%);
         width: 60vw;
         height: 60vw;
     }
