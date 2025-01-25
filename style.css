@@ -406,7 +406,7 @@ html {
         position: absolute;
         display: flex;
         justify-content: center;
-        top: -100%;
+        top: -50%;
         right: 20%;
         left: 20%;
         width: auto;
