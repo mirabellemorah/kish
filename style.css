@@ -8,17 +8,6 @@ body {
     font-size: 21px;
 }
 
-@keyframes appear {
-    0% {
-        opacity: 0;
-        scale: o.5;
-    }
-
-    100% {
-        opacity: 1;
-        scale: 1;
-    }
-}
 
 svg path {
     fill: transparent;
@@ -44,6 +33,8 @@ svg path {
     }
 }
 
+/* HEADER */
+
 header {
     display: flex;
     align-items: center;
@@ -54,9 +45,7 @@ header {
     font-weight: normal;
     font-size: 21px;
     margin-bottom: 40px;
-
 }
-
 
 .logo,
 header a,
@@ -66,7 +55,6 @@ a {
     margin: 10px;
     color: #f9f8f0;
     text-transform: uppercase;
-
 }
 
 a:hover {
@@ -77,17 +65,15 @@ a:hover {
     color: #c8f2f6;
 }
 
+/* HERO */
 
 .hero {
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: 70px;
-    margin-bottom: 80px;
-    width: 100%;
+    margin: 70px auto 130px auto;
     height: 80vh;
     animation: heroAppear 3s ease-in-out;
-
 }
 
 /* take out at the end 
@@ -106,9 +92,14 @@ a:hover {
 
 take out at the end */
 
-.hero-text {
-    gap: 3px;
+.hero-wrapper {
+    margin: 20px;
+    width: 100%;
+    position: relative;
+}
 
+.hero-text {
+    width: fit-content;
 }
 
 .hero h1 {
@@ -117,69 +108,17 @@ take out at the end */
     font-weight: 300;
     line-height: 1;
     font-family: anton sc;
-
 }
 
 .moments {
     position: relative;
     left: 25%;
-
 }
-
 
 .hero-explain {
+    width: fit-content;
     font-size: 20px;
-    font-family: inter;
-    font-weight: 200;
     margin-top: 20px;
-
-}
-
-.hero-img-wrapper {
-    position: absolute;
-    top: 20%;
-    right: 85%;
-    max-width: 30px;
-    height: 300px;
-    animation: float 3s ease-in-out infinite;
-    mix-blend-mode: darken;
-}
-
-
-.hero-img,
-.hero-img2 {
-
-    width: 100%;
-    height: 100%;
-    transform: rotate(10deg);
-    transition: 0.8s ease;
-
-}
-
-.hero-img:hover {
-    transform: rotate(-10deg);
-    width: 300px;
-}
-
-.hero-img2-wrapper {
-    position: absolute;
-    top: 25%;
-    right: 10%;
-    max-width: 20vw;
-    height: 20vw;
-    animation: float 3s ease-in-out infinite;
-    mix-blend-mode: screen;
-}
-
-.hero-img2 img {
-    border-radius: inherit;
-    transition: 1s ease-in-out;
-
-}
-
-.hero-img2:hover img {
-    transform: rotate(-10deg);
-    border-radius: 100%;
 }
 
 .hero-img img,
@@ -188,8 +127,57 @@ take out at the end */
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    transform: rotate(10deg);
+    transition: 0.8s ease;
+}
+
+.hero-img {
+    position: absolute;
+    top: 20%;
+    right: 85%;
+    width: 30px;
+    height: 300px;
+    animation: float 3s ease-in-out infinite;
+    mix-blend-mode: darken;
+    visibility: visible;
+}
+
+.hero-img:hover img {
+    transform: rotate(-10deg);
+    width: 300px;
+}
+
+.hero-img2 {
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    width: 20vw;
+    height: 20vw;
+    animation: float 3s ease-in-out infinite;
+    mix-blend-mode: screen;
 
 }
+
+.hero-img2:hover img {
+    transform: rotate(-10deg);
+    border-radius: 100%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* GALLERY */
 
 .gallery1 {
     display: flex;
@@ -199,34 +187,38 @@ take out at the end */
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 0 20px;
-
 }
 
 .galleryimages {
-
     width: 350px;
     height: 350px;
     object-fit: cover;
     border-radius: 20px;
-    transition: 0.8s ease-in-out;
-    animation: appear ease-in-out;
     filter: grayscale(100%);
-    transition: 0.2s ease-in-out;
     overflow: hidden;
+    transition: 0.2s ease-in-out;
+    animation: appear ease-in-out;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
-}
-
-.galleryimages img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-
 }
 
 .galleryimages:hover {
     filter: grayscale(0%);
 }
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/* CONTACT */
 
 .CA h2 {
     margin: 7px;
@@ -261,6 +253,7 @@ take out at the end */
     top: -100%;
 }
 
+/* FOOTER */
 
 footer {
     display: flex;
@@ -274,53 +267,35 @@ footer {
 
 }
 
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
 html {
     scroll-behavior: smooth;
 }
 
-
 /*ABOUT PAGE*/
-
 
 .about-page {
     font-size: 20px;
     display: flex;
-    height: 70vh;
+
     line-height: 1.6;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
 
 .about-text {
     font-family: inter;
     font-weight: 200;
     width: 40vw;
-    font-size: 18px;
+    font-size: 25px;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
 .about-h3 {
-    font-size: 30px;
+    font-size: 37px;
     font-weight: 200;
     margin: 0;
 }
@@ -332,7 +307,6 @@ html {
     height: 100vh;
     transition: 0.2s ease-in-out;
     z-index: -1;
-
 }
 
 .about-img img {
@@ -351,65 +325,29 @@ html {
 
 /*MEDIA QUERIES*/
 
-@media screen and (max-width: 600px) {
+/* max-width: 928px INDEX PAGE*/
 
-    body {
-        padding: 20px;
-        line-height: 1.4;
-        font-size: 17px;
-    }
-
-
-    header,
-    footer {
-        display: block;
-        font-size: 15px;
-        margin-bottom: 100px;
-
-    }
+@media screen and (max-width: 928px) {
 
     .hero {
-        position: relative;
+        margin: 70px auto 70px auto;
+        height: 70vh;
+    }
+
+    .gallery1 {
         display: flex;
-        height: 60vh;
-        padding: 20px;
-        gap: 1000px;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 10px;
     }
 
-
-    .hero-img2-wrapper {
-
-        max-width: 100px;
-        height: 150px;
+    .galleryimages {
+        width: 40%;
+        height: auto;
+        filter: grayscale(100%);
     }
 
-    .hero-explain {
-        margin-top: 50px;
-
-    }
-
-
-    .ca {
-        padding: 10px;
-    }
-
-    .CA h2 {
-        margin: 7px;
-        font-size: clamp(10px, 2vw + 25px, 40px);
-        line-height: 1;
-        font-family: anton sc;
-    }
-
-}
-
-
-/*ABOUT PAGE*/
-
-@media screen and (max-width: 900px) {
-
-    header {
-        margin-bottom: 20px;
-    }
+    /* max-width: 928px ABOUT PAGE*/
 
     .about-page {
         display: flex;
@@ -418,7 +356,6 @@ html {
         margin-top: 20px;
         margin-bottom: 20px;
         height: max-content;
-
     }
 
     .about-h3 {
@@ -427,10 +364,9 @@ html {
 
     .about-text {
         width: 100%;
-        font-size: 16px;
+        font-size: 21px;
         margin-top: 50px;
         margin-bottom: 40px;
-
     }
 
     .about-img {
@@ -438,11 +374,109 @@ html {
         position: relative;
         width: 100%;
         height: 300px;
-
     }
 
     .about-footer {
-        margin: 60px 10px 30px 10px;
         justify-content: center;
+    }
+}
+
+/* max-width: 600px MEDIA QUERY*/
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 15px;
+        line-height: 1.4;
+        font-size: 17px;
+    }
+
+    header,
+    footer {
+        font-size: 13px;
+        margin-bottom: 60px;
+    }
+
+    .hero {
+        height: 85vh;
+        align-items: flex-end;
+    }
+
+    .hero-img2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: -399px;
+        right: 20%;
+        left: 20%;
+        width: auto;
+        height: 350px;
+        animation: float 3s ease-in-out infinite;
+        mix-blend-mode: screen;
+    }
+
+    .hero-img {
+        visibility: hidden;
+    }
+
+    .hero-wrapper {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .moments {
+        position: relative;
+        left: 50%;
+    }
+
+    .CA {
+        padding: 10px;
+    }
+
+    .CA h2 {
+        margin: 3px;
+        font-size: 25px;
+        line-height: 1;
+        font-family: anton sc;
+    }
+
+    .galleryimages {
+        width: 100%;
+        height: 400px;
+        filter: grayscale(100%);
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    header,
+    footer {
+
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+
+    .logo,
+    header a,
+    a {
+        font-weight: 200;
+        margin: 2px;
+    }
+
+    .moments {
+        position: relative;
+        left: 20%;
+    }
+
+    .CA h2 {
+        margin: 3px;
+        font-size: 18px;
+        line-height: 1;
+        font-family: anton sc;
+    }
+
+    .hero-img2 {
+        top: -470px;
     }
 }
