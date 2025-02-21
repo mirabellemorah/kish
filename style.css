@@ -10,16 +10,17 @@ body {
 }
 
 body.light-mode {
-    background-color: #4219d5;
-    color: #01acbb;
+    background-color: #f9f8f0;
+    color: #000000;
+    /*color: #01acbb; */
 }
 
 body.light-mode a {
-    color: #01acbb;
+    color: #000000;
 }
 
 body.light-mode a:hover {
-    color: #f9f8f0;
+    color: #232323;
 }
 
 button {
@@ -37,7 +38,7 @@ button {
 }
 
 svg path {
-    fill: #01acbb;
+    fill: #000000;
     stroke: #f9f8f0;
     stroke-width: 1;
     stroke-dasharray: 90;
@@ -77,7 +78,7 @@ header {
 .logo,
 header a,
 a {
-    font-weight: 200;
+    font-weight: 400;
     text-decoration: none;
     margin: 10px;
     color: #f9f8f0;
@@ -275,7 +276,6 @@ take out at the end */
 
 /*OVERLAYS*/
 
-
 .modal {
     display: none;
     visibility: visible;
@@ -342,7 +342,6 @@ take out at the end */
 }
 
 .ca-about {
-
     position: relative;
     top: -100%;
 }
@@ -369,7 +368,6 @@ html {
 .about-page {
     font-size: 20px;
     display: flex;
-
     line-height: 1.6;
     align-items: center;
     justify-content: space-between;
@@ -502,7 +500,7 @@ html {
         left: 50%;
         width: 60vw;
         height: 60vw;
-        transform: rotate(-3deg) translate(-50%, -110%);
+        transform: rotate(0deg) translate(-50%, -110%);
     }
 
     .moments {
@@ -548,7 +546,6 @@ html {
     .logo,
     header a,
     a {
-        font-weight: 200;
         margin: 2px;
     }
 
