@@ -10,7 +10,7 @@ body {
 }
 
 body.light-mode {
-    background-color: #f9f8f0;
+    background-color: #4219d5;
     color: #01acbb;
 }
 
@@ -19,7 +19,7 @@ body.light-mode a {
 }
 
 body.light-mode a:hover {
-    color: #555;
+    color: #f9f8f0;
 }
 
 button {
@@ -37,7 +37,7 @@ button {
 }
 
 svg path {
-    fill: #000;
+    fill: #01acbb;
     stroke: #f9f8f0;
     stroke-width: 1;
     stroke-dasharray: 90;
@@ -304,12 +304,11 @@ take out at the end */
 
 .modal-content {
     position: fixed;
-    height: auto;
     background: transparent;
     top: 50%;
     left: 50%;
-    width: 70%;
-    height: 70%;
+    width: 500px;
+    height: auto;
     transform: translate(-50%, -50%);
     z-index: 2;
 }

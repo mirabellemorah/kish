@@ -27,7 +27,7 @@ document.getElementById("theme-toggle").addEventListener("click", function () {
 
 });
 
-//color change
+/* //color change
 
 $(document).on("scroll", function () {
 
@@ -47,7 +47,7 @@ $(document).on("scroll", function () {
         $("body").css("background-color", "#000");
 
     } else if (pixelsFromTop < 1500) {
-        $("body").css("background-color", "#f9f8f0");
+        $("body").css("background-color", "orange");
     }
 
     else {
@@ -68,4 +68,4 @@ $(document).on("scroll", function () {
 
     $(".bar").css("width", percentage + "%");
 
-})
+}) */
