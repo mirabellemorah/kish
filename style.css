@@ -6,12 +6,39 @@ body {
     font-family: inter;
     font-weight: 200;
     font-size: 21px;
+    transition: all 0.5s ease-in-out;
 }
 
+body.light-mode {
+    background-color: #f9f8f0;
+    color: #01acbb;
+}
+
+body.light-mode a {
+    color: #01acbb;
+}
+
+body.light-mode a:hover {
+    color: #555;
+}
+
+button {
+    position: fixed;
+    bottom: 10%;
+    right: 2%;
+    font-weight: 200;
+    color: #f9f8f0;
+    background-color: transparent;
+    border: 1px solid #f9f8f0;
+    border-radius: 30px;
+    padding: 5px 15px;
+    cursor: pointer;
+    z-index: 99;
+}
 
 svg path {
-    fill: transparent;
-    stroke: #fff;
+    fill: #000;
+    stroke: #f9f8f0;
     stroke-width: 1;
     stroke-dasharray: 90;
     stroke-dashoffset: 90;
@@ -131,6 +158,11 @@ take out at the end */
     visibility: visible;
 }
 
+.hero-img-wrapper.light-mode {
+    mix-blend-mode: screen;
+    transition: all 0.5s ease-in-out;
+}
+
 .hero-img,
 .hero-img2 {
     width: 100%;
@@ -153,8 +185,12 @@ take out at the end */
     height: 25vw;
     transform: rotate(10deg);
     mix-blend-mode: screen;
+}
 
-
+.hero-img2-wrapper.light-mode {
+    mix-blend-mode: normal;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
 }
 
 .hero-img2 {
@@ -465,8 +501,8 @@ html {
     .hero-img2-wrapper {
         top: 50%;
         left: 50%;
-        width: 70vw;
-        height: 70vw;
+        width: 60vw;
+        height: 60vw;
         transform: rotate(-3deg) translate(-50%, -110%);
     }
 
