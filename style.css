@@ -71,8 +71,8 @@ a:hover {
     position: relative;
     display: flex;
     align-items: center;
-    margin: 70px auto 130px auto;
-    height: 80vh;
+    margin: 70px auto 70px auto;
+    height: max-content;
     animation: heroAppear 3s ease-in-out;
 }
 
@@ -183,7 +183,6 @@ take out at the end */
     border-radius: 20px;
 }
 
-
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -203,11 +202,9 @@ take out at the end */
 .gallery1 {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    padding: 0 20px;
 }
 
 .galleryimages {
@@ -216,6 +213,7 @@ take out at the end */
     object-fit: cover;
     border-radius: 20px;
     filter: grayscale(100%);
+    border: 5px solid transparent;
     overflow: hidden;
     transition: 0.2s ease-in-out;
     animation: appear ease-in-out;
@@ -391,17 +389,9 @@ html {
         height: 70vh;
     }
 
-    .gallery1 {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 0 10px;
-    }
-
     .galleryimages {
-        width: 40%;
+        width: 30%;
         height: auto;
-        filter: grayscale(100%);
     }
 
     /* max-width: 928px ABOUT PAGE*/
@@ -460,7 +450,7 @@ html {
     }
 
     .hero {
-        height: 80vh;
+
         align-items: flex-end;
         position: relative;
     }
