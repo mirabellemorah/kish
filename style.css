@@ -23,6 +23,25 @@ body.light-mode a:hover {
     color: #232323;
 }
 
+body.blue-mode {
+    background-color: #4610c4;
+    color: #01acbb;
+}
+
+body.blue-mode a {
+    color: #01acbb;
+}
+
+body.blue-mode a:hover {
+    color: rgb(119, 114, 114);
+}
+
+.hero-img-wrapper.blue-mode,
+.hero-img2-wrapper.blue-mode {
+    mix-blend-mode: screen;
+    /* Adjust if needed */
+}
+
 button {
     position: fixed;
     bottom: 10%;

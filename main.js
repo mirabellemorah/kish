@@ -20,11 +20,23 @@ $(".modal-background, .modal-close").on("click", function (ev) {
 });
 
 document.getElementById("theme-toggle").addEventListener("click", function () {
-    document.body.classList.toggle("light-mode");
+    const body = document.body;
 
-    document.querySelector(".hero-img-wrapper").classList.toggle("light-mode");
-    document.querySelector(".hero-img2-wrapper").classList.toggle("light-mode");
+    if (body.classList.contains("light-mode")) {
+        body.classList.remove("light-mode");
+        body.classList.add("blue-mode");
+    } else if (body.classList.contains("blue-mode")) {
+        body.classList.remove("blue-mode"); // Goes back to default (dark mode)
+    } else {
+        body.classList.add("light-mode");
+    }
 
+    // Also toggle hero images if needed
+    document.querySelector(".hero-img-wrapper").classList.toggle("light-mode", body.classList.contains("light-mode"));
+    document.querySelector(".hero-img-wrapper").classList.toggle("blue-mode", body.classList.contains("blue-mode"));
+
+    document.querySelector(".hero-img2-wrapper").classList.toggle("light-mode", body.classList.contains("light-mode"));
+    document.querySelector(".hero-img2-wrapper").classList.toggle("blue-mode", body.classList.contains("blue-mode"));
 });
 
 /* //color change
